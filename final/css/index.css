@@ -8,6 +8,11 @@
     left: 10px;
     top: 10px;
 }
+.bottom{
+    position: absolute;
+    top: 412px;
+    color: red;
+}
 .next{
     width: 80px;
     height: 80px;
