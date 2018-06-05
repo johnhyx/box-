@@ -1,4 +1,4 @@
-var Square= function(){
+var Square2= function(){
     //方块数据，4*4的矩阵
     this.data = [
         [0,2,0,0],
@@ -43,7 +43,7 @@ var Square= function(){
 };
 
 //判断方块是否可以旋转
-Square.prototype.canRotate = function (isValid) {
+Square2.prototype.canRotate = function (isValid) {
     var d = this.dir + 1;
     if(d == 4){
         d = 0;
@@ -61,7 +61,7 @@ Square.prototype.canRotate = function (isValid) {
     }
     return isValid(this.origin , text);
 };
-Square.prototype.rotate = function () {
+Square2.prototype.rotate = function () {
     this.dir= this.dir + 1;
     if(this.dir == 4){
         this.dir = 0;
@@ -73,32 +73,32 @@ Square.prototype.rotate = function () {
     }
 };
 //判断方块是否可以下降
-Square.prototype.canDown = function (isValid) {
+Square2.prototype.canDown = function (isValid) {
     var text = {};
     text.x = this.origin.x + 1;
     text.y = this.origin.y;
     return isValid(text, this.data);
 };
-Square.prototype.down = function () {
+Square2.prototype.down = function () {
     this.origin.x = this.origin.x + 1;
 };
 //判断方块是否可以左移
-Square.prototype.canLeft = function (isValid) {
+Square2.prototype.canLeft = function (isValid) {
     var text = {};
     text.x = this.origin.x;
     text.y = this.origin.y - 1;
     return isValid(text, this.data);
 };
-Square.prototype.left = function () {
+Square2.prototype.left = function () {
     this.origin.y = this.origin.y - 1;
 };
 //判断方块是否可以右移
-Square.prototype.canRight = function (isValid) {
+Square2.prototype.canRight = function (isValid) {
     var text = {};
     text.x = this.origin.x;
     text.y = this.origin.y + 1;
     return isValid(text, this.data);
 };
-Square.prototype.right = function () {
+Square2.prototype.right = function () {
     this.origin.y = this.origin.y + 1;
 };
