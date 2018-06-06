@@ -1,18 +1,5 @@
-var Square2= function(){
-    //方块数据，4*4的矩阵
-    this.data = [
-        [0,2,0,0],
-        [0,2,0,0],
-        [0,2,0,0],
-        [0,2,0,0]
-    ];
-    //原点
-    this.origin = {
-        x: 0,
-        y: 0
-    };
-    //旋转方向
-    this.dir = 0;
+var Square1= function(){
+    Square.call(this);
     //旋转数组
     this.rotates = [
         [
@@ -41,64 +28,249 @@ var Square2= function(){
         ]
     ];
 };
-
 //判断方块是否可以旋转
-Square2.prototype.canRotate = function (isValid) {
-    var d = this.dir + 1;
-    if(d == 4){
-        d = 0;
-    };
-    var text = [
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0],
-        [0,0,0,0]
+Square1.prototype = Square.prototype;
+
+//方块2
+var Square2= function(){
+    Square.call(this);
+    //旋转数组
+    this.rotates = [
+        [
+            [0,2,0,0],
+            [2,2,2,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,0,0,0],
+            [2,2,0,0],
+            [2,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,2,2,0],
+            [0,2,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [0,2,0,0],
+            [2,2,0,0],
+            [0,2,0,0],
+            [0,0,0,0]
+        ]
     ];
-    for(var i = 0; i<this.data.length; i++){
-        for(var j = 0; j<this.data[0].length; j++){
-            text[i][j] = this.rotates[d][i][j];
+};
+//判断方块是否可以旋转
+Square2.prototype = Square.prototype;
+
+
+//方块3
+var Square3= function(){
+    Square.call(this);
+    //旋转数组
+    this.rotates = [
+        [
+            [2,2,2,0],
+            [0,0,2,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [0,2,0,0],
+            [0,2,0,0],
+            [2,2,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,0,0,0],
+            [2,2,2,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,2,0,0],
+            [2,0,0,0],
+            [2,0,0,0],
+            [0,0,0,0]
+        ]
+    ];
+};
+//判断方块是否可以旋转
+Square3.prototype = Square.prototype;
+
+//方块4
+var Square4= function(){
+    Square.call(this);
+    //旋转数组
+    this.rotates = [
+        [
+            [2,2,2,0],
+            [2,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,2,0,0],
+            [0,2,0,0],
+            [0,2,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [0,0,2,0],
+            [2,2,2,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,0,0,0],
+            [2,0,0,0],
+            [2,2,0,0],
+            [0,0,0,0]
+        ]
+    ];
+};
+//判断方块是否可以旋转
+Square4.prototype = Square.prototype;
+
+
+//方块5
+var Square5= function(){
+    Square.call(this);
+    //旋转数组
+    this.rotates = [
+        [
+            [2,2,0,0],
+            [2,2,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,2,0,0],
+            [2,2,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,2,0,0],
+            [2,2,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,2,0,0],
+            [2,2,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ]
+    ];
+};
+//判断方块是否可以旋转
+Square5.prototype = Square.prototype;
+
+
+//方块6
+var Square6= function(){
+    Square.call(this);
+    //旋转数组
+    this.rotates = [
+        [
+            [0,2,2,0],
+            [2,2,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,0,0,0],
+            [2,2,0,0],
+            [0,2,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [0,2,2,0],
+            [2,2,0,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,0,0,0],
+            [2,2,0,0],
+            [0,2,0,0],
+            [0,0,0,0]
+        ]
+    ];
+};
+//判断方块是否可以旋转
+Square6.prototype = Square.prototype;
+
+
+//方块7
+var Square7= function(){
+    Square.call(this);
+    //旋转数组
+    this.rotates = [
+        [
+            [2,2,0,0],
+            [0,2,2,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [0,2,0,0],
+            [2,2,0,0],
+            [2,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [2,2,0,0],
+            [0,2,2,0],
+            [0,0,0,0],
+            [0,0,0,0]
+        ],
+        [
+            [0,2,0,0],
+            [2,2,0,0],
+            [2,0,0,0],
+            [0,0,0,0]
+        ]
+    ];
+};
+//判断方块是否可以旋转
+Square7.prototype = Square.prototype;
+
+//定义方块工厂，制造方块
+var SquareFactory = function () {};
+    SquareFactory.prototype.make = function (index, dir) {//index方块种类  dir旋转方向
+        var s;
+        index = index + 1;
+        switch (index){
+            case 1:
+                s =new Square1();
+                break;
+            case 2:
+                s =new Square2();
+                break;
+            case 3:
+                s =new Square3();
+                break;
+            case 4:
+                s =new Square4();
+                break;
+            case 5:
+                s =new Square5();
+                break;
+            case 6:
+                s =new Square6();
+                break;
+            case 7:
+                s =new Square7();
+                break;
+            default:
+                break;
         }
-    }
-    return isValid(this.origin , text);
-};
-Square2.prototype.rotate = function () {
-    this.dir= this.dir + 1;
-    if(this.dir == 4){
-        this.dir = 0;
-    }
-    for(var i = 0; i<this.data.length; i++){
-        for(var j = 0; j<this.data[0].length; j++){
-            this.data[i][j] = this.rotates[this.dir][i][j];
-        }
-    }
-};
-//判断方块是否可以下降
-Square2.prototype.canDown = function (isValid) {
-    var text = {};
-    text.x = this.origin.x + 1;
-    text.y = this.origin.y;
-    return isValid(text, this.data);
-};
-Square2.prototype.down = function () {
-    this.origin.x = this.origin.x + 1;
-};
-//判断方块是否可以左移
-Square2.prototype.canLeft = function (isValid) {
-    var text = {};
-    text.x = this.origin.x;
-    text.y = this.origin.y - 1;
-    return isValid(text, this.data);
-};
-Square2.prototype.left = function () {
-    this.origin.y = this.origin.y - 1;
-};
-//判断方块是否可以右移
-Square2.prototype.canRight = function (isValid) {
-    var text = {};
-    text.x = this.origin.x;
-    text.y = this.origin.y + 1;
-    return isValid(text, this.data);
-};
-Square2.prototype.right = function () {
-    this.origin.y = this.origin.y + 1;
-};
+        s.origin.x = 0;
+        s.origin.y = 3;
+        s.rotate(dir);
+        return s;
+    };
