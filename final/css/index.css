@@ -37,11 +37,12 @@
     background-color: #F2FAFF;
 }
 .current {
-    background-color: pink;
-    border: 1px solid red;
+    background-color: black;
+    border: 1px solid #cccccc;
+    opacity: 0.9;
 }
 .done {
-    background-color: #ccc;
-    border: 1px solid black;
+    background-color: green;
+    border: 1px solid #cccccc;
 }
 
