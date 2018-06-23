@@ -22,6 +22,8 @@ var Local = function () {
                   game.left();
               }else if(e.keyCode == 32){//space
                   game.fall();
+              }else if(e.keyCode == 16){
+                  game.stop();
               }
         }
     };

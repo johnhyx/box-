@@ -4,6 +4,7 @@ var Game = function () {
     var nextDiv;
     var timeDiv;
     var scoreDiv;
+    var stopkey = true;  //定义stop布尔值
     //保留分数
     var score = 0;
     //游戏矩阵
@@ -157,6 +158,14 @@ var clearData = function () {
             refreshDiv(gameData, gameDivs);
         }
     };
+    //暂停
+    var stop = function () {
+        if(!stopkey){
+            clearInterval(timeDiv);
+        }else {
+            stop();
+        }
+    };
 //方块到达底部，将它固定
     var fixed = function () {
         for(var i = 0; i<cur.data.length; i++ ){
@@ -274,6 +283,7 @@ var clearData = function () {
     this.checkGameOver = checkGameOver;
     this.setTime = setTime;
     this.addScore = addScore;
+    this.stop = stop;
     this.fall = function () {
         while (down());
     }
