@@ -31,6 +31,7 @@ Square.prototype.canRotate = function (isValid) {
    }
     return isValid(this.origin , text);
 };
+
 Square.prototype.rotate = function (num) {
     if(!num) num = 1;
     this.dir= (this.dir + num) % 4;
